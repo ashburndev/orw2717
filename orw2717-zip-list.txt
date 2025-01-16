@@ -1,0 +1,43 @@
+
+7-Zip 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+
+Scanning the drive for archives:
+1 file, 70937 bytes (70 KiB)
+
+Listing archive: ..\sbapp2717g.zip
+
+--
+Path = ..\sbapp2717g.zip
+Type = zip
+Physical Size = 70937
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2023-11-17 08:18:44 D....            0            2  sbapp2717g
+2023-11-17 08:18:44 .....         1724          607  sbapp2717g\HELP.md
+2023-11-17 08:18:44 .....         2868         1211  sbapp2717g\gradlew.bat
+2023-11-17 08:18:44 .....          444          242  sbapp2717g\.gitignore
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\main
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\main\java
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\main\java\ashburncode
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\main\java\ashburncode\sbapp2717g
+2023-11-17 08:18:44 .....          339          180  sbapp2717g\src\main\java\ashburncode\sbapp2717g\Sbapp2717grajarj17Application.java
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\main\resources
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\main\resources\templates
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\main\resources\static
+2023-11-17 08:18:44 .....            1            3  sbapp2717g\src\main\resources\application.properties
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\test
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\test\java
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\test\java\ashburncode
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\src\test\java\ashburncode\sbapp2717g
+2023-11-17 08:18:44 .....          226          161  sbapp2717g\src\test\java\ashburncode\sbapp2717g\Sbapp2717grajarj17ApplicationTests.java
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\gradle
+2023-11-17 08:18:44 D....            0            2  sbapp2717g\gradle\wrapper
+2023-11-17 08:18:44 .....          250          152  sbapp2717g\gradle\wrapper\gradle-wrapper.properties
+2023-11-17 08:18:44 .....        63721        57558  sbapp2717g\gradle\wrapper\gradle-wrapper.jar
+2023-11-17 08:18:44 .....           32           34  sbapp2717g\settings.gradle
+2023-11-17 08:18:44 .....          737          347  sbapp2717g\build.gradle
+2023-11-17 08:18:44 .....         8692         3688  sbapp2717g\gradlew
+------------------- ----- ------------ ------------  ------------------------
+2023-11-17 08:18:44              79034        64213  11 files, 15 folders
