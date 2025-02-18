@@ -1,12 +1,12 @@
 package ashburncode.sbapp2717g;
 
-import io.swagger.v3.oas.annotations.Operation;
 import java.io.StringReader;
 import java.io.StringWriter;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+//import io.swagger.v3.oas.annotations.Operation;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
@@ -19,7 +19,7 @@ import jakarta.xml.bind.Unmarshaller;
 @RestController
 public class DemojaxbController {
 
-	@Operation(summary = "demojaxbmarshaller value string", description = "demojaxbmarshaller notes string")
+//	@Operation(summary = "demojaxbmarshaller value string", description = "demojaxbmarshaller notes string")
 	@GetMapping("/demojaxbmarshaller")
 	public String demojaxbmarshaller() {
 		Book book = new Book();
@@ -30,7 +30,7 @@ public class DemojaxbController {
 		return marshalbook(book);
 	}
 
-	@Operation(summary = "demojaxbunmarshaller value string", description = "demojaxbunmarshaller notes string")
+//	@Operation(summary = "demojaxbunmarshaller value string", description = "demojaxbunmarshaller notes string")
 	@GetMapping("/demojaxbunmarshaller")
 	public String demojaxbunmarshaller() {
 

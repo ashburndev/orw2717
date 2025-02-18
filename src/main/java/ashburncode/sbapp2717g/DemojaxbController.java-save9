@@ -1,16 +1,16 @@
 package ashburncode.sbapp2717g;
 
-import io.swagger.v3.oas.annotations.Operation;
 import java.io.StringReader;
 import java.io.StringWriter;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.xml.bind.JAXBContext;
-import jakarta.xml.bind.JAXBException;
-import jakarta.xml.bind.Marshaller;
-import jakarta.xml.bind.Unmarshaller;
+import io.swagger.annotations.ApiOperation;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 //import io.swagger.v3.oas.annotations.Operation;
 //import java.util.*;
@@ -19,7 +19,7 @@ import jakarta.xml.bind.Unmarshaller;
 @RestController
 public class DemojaxbController {
 
-	@Operation(summary = "demojaxbmarshaller value string", description = "demojaxbmarshaller notes string")
+	@ApiOperation(value = "demojaxbmarshaller value string", notes = "demojaxbmarshaller notes string")
 	@GetMapping("/demojaxbmarshaller")
 	public String demojaxbmarshaller() {
 		Book book = new Book();
@@ -30,7 +30,7 @@ public class DemojaxbController {
 		return marshalbook(book);
 	}
 
-	@Operation(summary = "demojaxbunmarshaller value string", description = "demojaxbunmarshaller notes string")
+	@ApiOperation(value = "demojaxbunmarshaller value string", notes = "demojaxbunmarshaller notes string")
 	@GetMapping("/demojaxbunmarshaller")
 	public String demojaxbunmarshaller() {
 

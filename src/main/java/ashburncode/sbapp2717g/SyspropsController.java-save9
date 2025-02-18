@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 public class SyspropsController {
 
-	@Operation(summary = "sysprops returns a selected subset of the Java system properties")  // works
+	@ApiOperation("sysprops returns a selected subset of the Java system properties")  // works
 	// @ApiOperation(summary = "sysprops returns a selected subset of the Java system properties")
 	@GetMapping("/sysprops")
 	public String sysprops() {
@@ -50,25 +50,25 @@ public class SyspropsController {
 		return sb.toString();
 	}
 
-	@Operation(summary = "sysprops value string", description = "sysprops notes string") 
+	@ApiOperation(value = "sysprops value string", notes = "sysprops notes string") 
 	@GetMapping("/sysprop/syspropNameViaPathVariable/{syspropname}")
 	public String syspropNameViaPathVariable(@PathVariable String syspropname) {
 		String syspropvalue = System.getProperty(syspropname.trim());
 		return "syspropname: " + syspropname + ", syspropvalue: " + syspropvalue;
 	}
 
-	@Operation(summary = "sysprops value string")
+	@ApiOperation(value = "sysprops value string")
 	@GetMapping("/sysprop/syspropNameViaRequestParameter")
 	public String syspropNameViaRequestParameter(@RequestParam String syspropname) {
 		String syspropvalue = System.getProperty(syspropname.trim());
 		return "syspropname: " + syspropname + ", syspropvalue: " + syspropvalue;
 	}
 
-	@Operation(summary = "sysprops value string", description = "sysprops notes string") 
+	@ApiOperation(value = "sysprops value string", notes = "sysprops notes string") 
 	// @ApiOperation(notes = "sysprops notes string") // fails
 	@GetMapping("/sysprop/syspropNameViaRequestHeader")
 	public String syspropNameViaRequestHeader(
-			@RequestHeader(required = true) String syspropname) {
+			@RequestHeader(value = "syspropname", required = true) String syspropname) {
 		String syspropvalue = System.getProperty(syspropname.trim());
 		return "syspropname: " + syspropname + ", syspropvalue: " + syspropvalue;
 	}

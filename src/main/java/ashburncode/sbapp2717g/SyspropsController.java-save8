@@ -11,8 +11,8 @@ import io.swagger.v3.oas.annotations.Operation;
 @RestController
 public class SyspropsController {
 
-	@Operation(summary = "sysprops returns a selected subset of the Java system properties")  // works
-	// @ApiOperation(summary = "sysprops returns a selected subset of the Java system properties")
+//	@Operation("sysprops returns a selected subset of the Java system properties")  // fails
+	@Operation(summary = "sysprops returns a selected subset of the Java system properties")
 	@GetMapping("/sysprops")
 	public String sysprops() {
 		// System.getProperties().list(System.out);
@@ -50,25 +50,24 @@ public class SyspropsController {
 		return sb.toString();
 	}
 
-	@Operation(summary = "sysprops value string", description = "sysprops notes string") 
+	@Operation(summary = "sysprop summary string", description = "sysprop description string")
 	@GetMapping("/sysprop/syspropNameViaPathVariable/{syspropname}")
 	public String syspropNameViaPathVariable(@PathVariable String syspropname) {
 		String syspropvalue = System.getProperty(syspropname.trim());
 		return "syspropname: " + syspropname + ", syspropvalue: " + syspropvalue;
 	}
 
-	@Operation(summary = "sysprops value string")
+	@Operation(summary = "sysprop summary string")
 	@GetMapping("/sysprop/syspropNameViaRequestParameter")
 	public String syspropNameViaRequestParameter(@RequestParam String syspropname) {
 		String syspropvalue = System.getProperty(syspropname.trim());
 		return "syspropname: " + syspropname + ", syspropvalue: " + syspropvalue;
 	}
 
-	@Operation(summary = "sysprops value string", description = "sysprops notes string") 
-	// @ApiOperation(notes = "sysprops notes string") // fails
+	@Operation(description = "sysprop description string")
 	@GetMapping("/sysprop/syspropNameViaRequestHeader")
 	public String syspropNameViaRequestHeader(
-			@RequestHeader(required = true) String syspropname) {
+			@RequestHeader(value = "syspropname", required = true) String syspropname) {
 		String syspropvalue = System.getProperty(syspropname.trim());
 		return "syspropname: " + syspropname + ", syspropvalue: " + syspropvalue;
 	}
